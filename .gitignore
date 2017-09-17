@@ -1,0 +1,7 @@
+*~
+gitinit.sh
+data/
+*.mat
+*.jpg
+*.png
+*.txt
