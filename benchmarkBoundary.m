@@ -2,12 +2,15 @@ function benchmarkBoundary(edges_dir, gt_dir, name)
 % Porting from Pdollar's edges.
 addpath('mex');
 addpath('utils');
-if nargin <2
+if nargin < 0
   edges_dir = 'data/tiny-edges';
   gt_dir = 'data/tiny-gts';
   name = 'Tiny-Edge';
+elseif nargin == 1
+  gt_dir = 'data/BSR/BSDS500/data/groundTruth/test';
+  [~, name, ~] = fileparts(edges_dir);
 elseif nargin == 2
-  name = 'Tiny-Edge';
+  [~, name, ~] = fileparts(edges_dir);
 end
 assert(exist(edges_dir, 'dir')==7); assert(exist(gt_dir, 'dir')==7);
 param = struct();
