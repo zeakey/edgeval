@@ -2,7 +2,7 @@ function benchmarkBoundary(edges_dir, gt_dir, name)
 % Porting from Pdollar's edges.
 addpath('mex');
 addpath('utils');
-if nargin < 0
+if nargin < 1
   edges_dir = 'data/tiny-edges';
   gt_dir = 'data/tiny-gts';
   name = 'Tiny-Edge';
